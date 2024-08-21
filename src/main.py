@@ -23,7 +23,6 @@ def operar_carro(carro : Carro):
     print('Infos atuais do carro')
     print(carro)
 
-
 if __name__ == "__main__":
 
     print('Cadastre o carro 1')
