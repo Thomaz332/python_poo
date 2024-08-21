@@ -19,32 +19,37 @@ def operar_carro(carro : Carro):
         t = float(input("Informe o tempo: "))
         carro.acelerar(v, t)
 
-    carro = Carro(nm_modelo, nm_marca, nm_cor, kms, motor=False)
     print('Infos atuais do carro')
     print(carro)
 
 if __name__ == "__main__":
 
     print('Cadastre o carro 1')
+    print("")
     nm_modelo = input('Digite o modelo: ')
     nm_marca = input('Digite a marca: ')
     nm_cor = input('Digite a cor: ')
-
+    litros = float(input("Nivel do tanque: "))
+    consumo_medio = float(input("Consumo medio: "))
     kms = float(input('Digite com quantos Kms: '))
 
-    carro1 = Carro(nm_modelo, nm_marca, nm_cor, kms, motor = False)
+    print("")
+
+    carro1 = Carro(nm_modelo, nm_marca, nm_cor, kms, False, litros, consumo_medio)
 
     print('Cadastre o carro 2')
+    print("")
     nm_modelo = input('Digite o modelo: ')
     nm_marca = input('Digite a marca: ')
     nm_cor = input('Digite a cor: ')
-
+    litros = float(input("Nivel do tanque: "))
+    consumo_medio = float(input("Consumo medio: "))
     kms = float(input('Digite com quantos Kms: '))
 
-    carro2 = Carro(nm_modelo, nm_marca, nm_cor, kms, motor = False)
+    carro2 = Carro(nm_modelo, nm_marca, nm_cor, kms, False, litros, consumo_medio)
 
 
-    while carro1.odometro < 600 and carro2.odometro < 600:
+    while carro1.odometro < 600 and carro2.odometro < 600 and (carro1.tanque > 0 or carro2.tanque > 0):
 
         try:
             op = 0
