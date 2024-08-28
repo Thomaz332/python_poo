@@ -49,7 +49,7 @@ if __name__ == "__main__":
     carro2 = Carro(nm_modelo, nm_marca, nm_cor, kms, False, litros, consumo_medio)
 
 
-    while carro1.odometro < 600 and carro2.odometro < 600 and (carro1.tanque > 0 or carro2.tanque > 0):
+    while carro1.get_odometro() < 600 and carro2.get_odometro() < 600 and (carro1.get_tanque() > 0 or carro2.get_tanque() > 0):
 
         try:
             op = 0
@@ -65,9 +65,9 @@ if __name__ == "__main__":
             print("Erro!")
             print(e)
 
-        if carro1.odometro > 600:
+        if carro1.get_odometro() > 600:
             print("Carro 1 venceu!")
-        elif carro2.odometro > 600:
+        elif carro2.get_odometro() > 600:
             print("Carro 2 venceu!")
 
 
